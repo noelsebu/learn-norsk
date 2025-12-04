@@ -5,6 +5,10 @@
     "jsx": "react-jsx",
     "module": "ESNext",
     "moduleResolution": "bundler",
-    "strict": true
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   }
 }
