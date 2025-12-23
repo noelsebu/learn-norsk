@@ -128,3 +128,19 @@ export const VOCAB: Record<string, Word[]> = {
 {n:"Til",e:"To",p:"til",g:"",l:"A1"},{n:"Fra",e:"From",p:"frah",g:"",l:"A1"},
 {n:"Med",e:"With",p:"meh",g:"",l:"A1"},{n:"Uten",e:"Without",p:"OO-ten",g:"",l:"A2"},
 {n:"For",e:"For",p:"for",g:"",l:"A1"},{n:"Om",e:"About",p:"om",g:"",l:"A2"},
+{n:"Mellom",e:"Between",p:"MEL-lom",g:"",l:"A2"},{n:"Under",e:"Under",p:"OON-der",g:"",l:"A2"},
+{n:"Over",e:"Over",p:"OH-ver",g:"",l:"A2"},{n:"Foran",e:"In front of",p:"FOR-ahn",g:"",l:"A2"},
+{n:"Bak",e:"Behind",p:"bahk",g:"",l:"A2"},{n:"Etter",e:"After",p:"ET-ter",g:"",l:"A2"},
+{n:"Før",e:"Before",p:"furr",g:"",l:"A2"},
+],
+"Farger":[
+{n:"Rød",e:"Red",p:"ruh",g:"adj",l:"A1"},{n:"Blå",e:"Blue",p:"blo",g:"adj",l:"A1"},
+{n:"Grønn",e:"Green",p:"grunn",g:"adj",l:"A1"},{n:"Gul",e:"Yellow",p:"gool",g:"adj",l:"A1"},
+{n:"Hvit",e:"White",p:"veet",g:"adj",l:"A1"},{n:"Svart",e:"Black",p:"svart",g:"adj",l:"A1"},
+{n:"Oransje",e:"Orange",p:"oo-RAHN-sheh",g:"adj",l:"A1"},{n:"Lilla",e:"Purple",p:"LIL-lah",g:"adj",l:"A1"},
+{n:"Rosa",e:"Pink",p:"ROH-sah",g:"adj",l:"A1"},{n:"Brun",e:"Brown",p:"broon",g:"adj",l:"A1"},
+{n:"Grå",e:"Gray",p:"gro",g:"adj",l:"A1"},
+],
+};
+
+export const ALL_WORDS = Object.values(VOCAB).flat();
