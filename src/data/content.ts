@@ -48,3 +48,53 @@ export const GRAMMAR: GrammarTopic[] = [
 {t:"Negation",em:"🚫",l:"A2",d:"'Ikke' goes AFTER verb in main clauses, BEFORE verb in subordinate clauses.",ex:["Jeg liker ikke kaffe. (main)","...fordi jeg ikke liker kaffe. (sub)","Liker du ikke kaffe? (question)"],tip:"No double negation: ingen, ingenting, aldri already imply negation."},
 {t:"Modal Verbs",em:"🔑",l:"A2",d:"kan, vil, skal, må, bør — followed by infinitive WITHOUT 'å'.",ex:["Jeg kan svømme.","Vi skal reise.","Du må spise.","Du bør lese mer."],tip:"kan=can, vil=want, skal=will/plan, må=must, bør=should."},
 {t:"Comparatives & Superlatives",em:"📏",l:"A2",d:"Regular: -ere (comp), -est (sup). Irregular for common adjectives. 'Mer/mest' for long words.",ex:["stor → større → størst","god → bedre → best","liten → mindre → minst","gammel → eldre → eldst"],tip:"Long adjectives: interessant → mer interessant → mest interessant."},
+{t:"Question Words",em:"❓",l:"A1",d:"Hva (what), hvem (who), hvor (where), når (when), hvorfor (why), hvordan (how), hvilken (which).",ex:["Hva gjør du?","Hvem er det?","Hvor bor du?","Hvorfor lærer du norsk?"],tip:"Hvilken (en), hvilket (et), hvilke (plural)."},
+{t:"Conjunctions",em:"🔗",l:"A2",d:"Coordinating: og, men, eller, for. Subordinating: fordi, at, når, hvis, som, selv om.",ex:["Jeg liker kaffe, men han liker te.","Jeg vet at hun kommer.","Hvis det regner, blir vi hjemme."],tip:"After subordinating conjunctions, 'ikke' moves before the verb."},
+{t:"Reflexive Verbs",em:"🪞",l:"A2",d:"Some verbs need a reflexive pronoun (seg/meg/deg/oss). The pronoun matches the subject.",ex:["Jeg vasker meg.","Hun setter seg.","Vi gleder oss.","De giftet seg."],tip:"Common: å legge seg (go to bed), å føle seg (feel), å bestemme seg (decide)."},
+{t:"Pronouns",em:"👤",l:"A1",d:"Subject: jeg, du, han, hun, vi, dere, de. Object: meg, deg, ham, henne, oss, dere, dem.",ex:["Jeg ser deg.","Kan du hjelpe meg?","Vi liker dem.","Hun ga ham boken."],tip:"'Man' is the impersonal pronoun (like 'one' or general 'you')."},
+];
+
+// ─── CONJUGATION ───
+export interface Conjugation {
+  i: string; pr: string; pa: string; pf: string; e: string; g: string;
+}
+
+export const CONJUGATIONS: Conjugation[] = [
+{i:"å snakke",pr:"snakker",pa:"snakket",pf:"har snakket",e:"to speak",g:"1"},
+{i:"å jobbe",pr:"jobber",pa:"jobbet",pf:"har jobbet",e:"to work",g:"1"},
+{i:"å spise",pr:"spiser",pa:"spiste",pf:"har spist",e:"to eat",g:"2"},
+{i:"å lese",pr:"leser",pa:"leste",pf:"har lest",e:"to read",g:"2"},
+{i:"å kjøpe",pr:"kjøper",pa:"kjøpte",pf:"har kjøpt",e:"to buy",g:"2"},
+{i:"å like",pr:"liker",pa:"likte",pf:"har likt",e:"to like",g:"2"},
+{i:"å bo",pr:"bor",pa:"bodde",pf:"har bodd",e:"to live",g:"3"},
+{i:"å prøve",pr:"prøver",pa:"prøvde",pf:"har prøvd",e:"to try",g:"3"},
+{i:"å drikke",pr:"drikker",pa:"drakk",pf:"har drukket",e:"to drink",g:"4"},
+{i:"å skrive",pr:"skriver",pa:"skrev",pf:"har skrevet",e:"to write",g:"4"},
+{i:"å se",pr:"ser",pa:"så",pf:"har sett",e:"to see",g:"4"},
+{i:"å gå",pr:"går",pa:"gikk",pf:"har gått",e:"to go",g:"4"},
+{i:"å komme",pr:"kommer",pa:"kom",pf:"har kommet",e:"to come",g:"4"},
+{i:"å sove",pr:"sover",pa:"sov",pf:"har sovet",e:"to sleep",g:"4"},
+{i:"å ta",pr:"tar",pa:"tok",pf:"har tatt",e:"to take",g:"4"},
+{i:"å gi",pr:"gir",pa:"ga",pf:"har gitt",e:"to give",g:"4"},
+];
+
+// ─── SENTENCE BUILDER ───
+export interface Sentence { w: string[]; e: string; l: "A1" | "A2"; }
+
+export const SENTENCES: Sentence[] = [
+{w:["Jeg","liker","kaffe"],e:"I like coffee",l:"A1"},
+{w:["Han","spiser","fisk"],e:"He eats fish",l:"A1"},
+{w:["Vi","bor","i","Norge"],e:"We live in Norway",l:"A1"},
+{w:["Hun","leser","en","bok"],e:"She reads a book",l:"A1"},
+{w:["Jeg","snakker","ikke","norsk"],e:"I don't speak Norwegian",l:"A1"},
+{w:["I","dag","spiser","jeg","fisk"],e:"Today I eat fish (V2!)",l:"A2"},
+{w:["Kan","du","hjelpe","meg"],e:"Can you help me?",l:"A1"},
+{w:["Bilen","min","er","rød"],e:"My car is red",l:"A2"},
+{w:["De","drikker","kaffe","hver","dag"],e:"They drink coffee every day",l:"A2"},
+{w:["Vi","skal","reise","til","Bergen"],e:"We will travel to Bergen",l:"A2"},
+{w:["Jeg","har","ikke","lest","boken"],e:"I have not read the book",l:"A2"},
+{w:["Fordi","jeg","ikke","forstår","norsk"],e:"Because I don't understand Norwegian",l:"A2"},
+{w:["Det","store","huset","er","hvitt"],e:"The big house is white",l:"A2"},
+{w:["Hun","bodde","i","Oslo","før"],e:"She lived in Oslo before",l:"A2"},
+{w:["Jeg","vil","gjerne","ha","vann"],e:"I would like water",l:"A2"},
+];
