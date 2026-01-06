@@ -98,3 +98,53 @@ export const SENTENCES: Sentence[] = [
 {w:["Hun","bodde","i","Oslo","før"],e:"She lived in Oslo before",l:"A2"},
 {w:["Jeg","vil","gjerne","ha","vann"],e:"I would like water",l:"A2"},
 ];
+
+// ─── FILL IN THE BLANK ───
+export interface FillBlank { s: string; a: string; h: string; l: "A1" | "A2"; }
+
+export const FILL_BLANKS: FillBlank[] = [
+{s:"Jeg ___ norsk.",a:"snakker",h:"speak (present)",l:"A1"},
+{s:"Hun ___ en bok.",a:"leser",h:"reads",l:"A1"},
+{s:"Vi ___ i Oslo.",a:"bor",h:"live",l:"A1"},
+{s:"Kan du ___ meg?",a:"hjelpe",h:"help (infinitive)",l:"A1"},
+{s:"De ___ til Norge i går.",a:"kom",h:"came (past of komme)",l:"A2"},
+{s:"Han har ___ boken.",a:"lest",h:"read (past participle)",l:"A2"},
+{s:"Vi ___ spise middag.",a:"skal",h:"shall/will (modal)",l:"A2"},
+{s:"___ heter du?",a:"Hva",h:"what (question word)",l:"A1"},
+{s:"Bilen ___ er blå.",a:"min",h:"my (possessive, after noun)",l:"A2"},
+{s:"Huset er ___ enn leiligheten.",a:"større",h:"bigger (comparative)",l:"A2"},
+{s:"Vi gleder ___ til ferien.",a:"oss",h:"ourselves (reflexive)",l:"A2"},
+{s:"Det er den ___ boken jeg har lest.",a:"beste",h:"best (superlative)",l:"A2"},
+{s:"Jeg gikk hjem ___ det regnet.",a:"fordi",h:"because (conjunction)",l:"A2"},
+{s:"___ du er sulten, kan du spise.",a:"Hvis",h:"if (conjunction)",l:"A2"},
+{s:"Mannen ___ bor her er lege.",a:"som",h:"who/which (relative)",l:"A2"},
+{s:"Jeg har ___ vært i Bergen.",a:"aldri",h:"never (adverb)",l:"A2"},
+];
+
+// ─── DIALOGUES ───
+export interface DialogueLine { w: string; n: string; e: string; }
+export interface Dialogue { t: string; l: "A1" | "A2"; li: DialogueLine[]; }
+
+export const DIALOGUES: Dialogue[] = [
+{t:"At the Café",l:"A1",li:[
+{w:"A",n:"Hei! Hva vil du ha?",e:"Hi! What would you like?"},
+{w:"B",n:"Jeg vil gjerne ha en kaffe, takk.",e:"I'd like a coffee, thanks."},
+{w:"A",n:"Stor eller liten?",e:"Big or small?"},
+{w:"B",n:"Stor, takk. Hva koster det?",e:"Big, thanks. How much?"},
+{w:"A",n:"Femti kroner.",e:"Fifty kroner."},
+{w:"B",n:"Vær så god. Tusen takk!",e:"Here you go. Thanks!"},
+]},
+{t:"Meeting Someone",l:"A1",li:[
+{w:"A",n:"Hei! Jeg heter Anna. Hva heter du?",e:"Hi! I'm Anna. What's your name?"},
+{w:"B",n:"Jeg heter Erik. Hyggelig å møte deg.",e:"I'm Erik. Nice to meet you."},
+{w:"A",n:"Hvor kommer du fra?",e:"Where are you from?"},
+{w:"B",n:"Jeg kommer fra India. Og du?",e:"I'm from India. And you?"},
+{w:"A",n:"Jeg er fra Bergen. Snakker du norsk?",e:"I'm from Bergen. Do you speak Norwegian?"},
+{w:"B",n:"Jeg snakker litt norsk. Jeg lærer!",e:"I speak a little Norwegian. I'm learning!"},
+]},
+{t:"At the Doctor",l:"A2",li:[
+{w:"A",n:"God dag. Hva kan jeg hjelpe deg med?",e:"Hello. How can I help you?"},
+{w:"B",n:"Jeg har vondt i hodet og er veldig sliten.",e:"I have a headache and I'm very tired."},
+{w:"A",n:"Hvor lenge har du hatt hodepine?",e:"How long have you had a headache?"},
+{w:"B",n:"I tre dager. Og jeg sover dårlig.",e:"For three days. And I sleep badly."},
+{w:"A",n:"Jeg skal skrive ut en resept.",e:"I'll write a prescription."},
