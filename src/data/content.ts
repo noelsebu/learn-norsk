@@ -148,3 +148,48 @@ export const DIALOGUES: Dialogue[] = [
 {w:"A",n:"Hvor lenge har du hatt hodepine?",e:"How long have you had a headache?"},
 {w:"B",n:"I tre dager. Og jeg sover dårlig.",e:"For three days. And I sleep badly."},
 {w:"A",n:"Jeg skal skrive ut en resept.",e:"I'll write a prescription."},
+]},
+{t:"Shopping",l:"A2",li:[
+{w:"A",n:"Har dere denne genseren i medium?",e:"Do you have this sweater in medium?"},
+{w:"B",n:"Ja, her er den. Vil du prøve den?",e:"Yes, here it is. Want to try it?"},
+{w:"A",n:"Ja, takk. Den passer perfekt!",e:"Yes thanks. It fits perfectly!"},
+{w:"B",n:"Den koster tre hundre og femti kroner.",e:"It costs 350 kroner."},
+{w:"A",n:"Kan jeg betale med kort?",e:"Can I pay with card?"},
+{w:"B",n:"Ja, selvfølgelig.",e:"Yes, of course."},
+]},
+{t:"Making Plans",l:"A2",li:[
+{w:"A",n:"Hva skal du gjøre i helgen?",e:"What will you do this weekend?"},
+{w:"B",n:"Jeg har ikke bestemt meg ennå.",e:"I haven't decided yet."},
+{w:"A",n:"Vi kan gå på tur hvis det er fint vær.",e:"We can hike if weather's nice."},
+{w:"B",n:"Det høres bra ut! Når møtes vi?",e:"Sounds good! When do we meet?"},
+{w:"A",n:"Klokka ni på lørdag?",e:"Nine on Saturday?"},
+{w:"B",n:"Perfekt. Jeg gleder meg!",e:"Perfect. Looking forward to it!"},
+]},
+{t:"Past Weekend",l:"A2",li:[
+{w:"A",n:"Hva gjorde du i helgen?",e:"What did you do this weekend?"},
+{w:"B",n:"Jeg reiste til Stavanger med familien.",e:"I went to Stavanger with family."},
+{w:"A",n:"Hva så dere?",e:"What did you see?"},
+{w:"B",n:"Vi gikk til Preikestolen. Fantastisk!",e:"We went to Pulpit Rock. Fantastic!"},
+{w:"A",n:"Hadde dere fint vær?",e:"Did you have nice weather?"},
+{w:"B",n:"Ja, sol og varmt. Vi hadde flaks!",e:"Yes, sunny and warm. We were lucky!"},
+]},
+];
+
+// ─── READING ───
+export interface ReadingQuestion { q: string; o: string[]; a: string; }
+export interface Reading { t: string; l: "A1" | "A2"; tx: string; en: string; qs: ReadingQuestion[]; }
+
+export const READINGS: Reading[] = [
+{t:"Min Dag",l:"A1",
+tx:"Jeg heter Kari. Jeg bor i Oslo. Hver dag står jeg opp klokka sju. Jeg spiser frokost med familien min — kaffe og brød med ost. Så går jeg til jobb. Jeg jobber på et kontor. Etter jobb trener jeg. Om kvelden lager jeg middag og leser en bok. Jeg legger meg klokka elleve.",
+en:"My name is Kari. I live in Oslo. Every day I get up at seven. I eat breakfast with my family — coffee and bread with cheese. Then I go to work. I work in an office. After work I exercise. In the evening I make dinner and read a book. I go to bed at eleven.",
+qs:[{q:"Hvor bor Kari?",o:["Bergen","Oslo","Tromsø"],a:"Oslo"},{q:"Hva spiser hun til frokost?",o:["Egg","Brød med ost","Suppe"],a:"Brød med ost"},{q:"Når legger hun seg?",o:["Klokka ni","Klokka elleve","Klokka tolv"],a:"Klokka elleve"}]},
+{t:"Helgeturen",l:"A2",
+tx:"Forrige helg reiste vi til Lofoten. Vi tok fly til Bodø og ferge videre. Været var fint. Vi bodde i en rorbu ved havet. Første dag gikk vi en lang tur i fjellet og så mange fugler. Andre dag fisket vi torsk fra en båt. Om kvelden lagde vi middag med fisken vi hadde fanget. Det var den beste middagen jeg har spist!",
+en:"Last weekend we traveled to Lofoten. We flew to Bodø and took a ferry onward. The weather was nice. We stayed in a fisherman's cabin by the sea. The first day we hiked in the mountains and saw many birds. The second day we fished cod from a boat. In the evening we made dinner with the fish we'd caught. It was the best dinner I've eaten!",
+qs:[{q:"Hvordan reiste de?",o:["Bil","Fly og ferge","Tog"],a:"Fly og ferge"},{q:"Hva gjorde de dag 1?",o:["Fisket","Gikk tur i fjellet","Svømte"],a:"Gikk tur i fjellet"},{q:"Hva spiste de?",o:["Pizza","Fisk de fanget","Pasta"],a:"Fisk de fanget"}]},
+{t:"Ny i Norge",l:"A2",
+tx:"Jeg heter Priya og flyttet til Norge for seks måneder siden. I begynnelsen var det vanskelig fordi jeg ikke snakket norsk. Nå går jeg på norskkurs tre ganger i uken. Grammatikken er fortsatt vanskelig! Vinteren var kald — minus tjue grader i januar. Men nordlysene var utrolig vakre. Jeg har fått mange norske venner. Min favoritt norske mat er brunost!",
+en:"My name is Priya and I moved to Norway six months ago. In the beginning it was hard because I didn't speak Norwegian. Now I attend Norwegian class three times a week. Grammar is still difficult! Winter was cold — minus twenty in January. But the northern lights were incredibly beautiful. I've made many Norwegian friends. My favorite Norwegian food is brown cheese!",
+qs:[{q:"Når flyttet Priya?",o:["For et år siden","For seks måneder siden","I fjor"],a:"For seks måneder siden"},{q:"Hva er vanskelig?",o:["Maten","Grammatikken","Vennene"],a:"Grammatikken"},{q:"Hva liker hun å spise?",o:["Fisk","Brunost","Kjøttkaker"],a:"Brunost"}]},
+];
