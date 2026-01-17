@@ -2,10 +2,10 @@
 
 import { useState } from 'react';
 import { VOCAB } from '@/data/vocabulary';
-import { GRAMMAR, PHRASES, EXERCISES, DIALOGUES, READING } from '@/data/content';
+import { GRAMMAR, PHRASES, CONJUGATIONS, SENTENCES, FILL_BLANKS, DIALOGUES, READINGS } from '@/data/content';
 import styles from './NorskApp.module.css';
 
-type Section = 'vocab' | 'grammar' | 'phrases' | 'exercises' | 'dialogues' | 'reading';
+type Section = 'vocab' | 'grammar' | 'phrases' | 'conjugations' | 'dialogues' | 'readings';
 
 export default function NorskApp() {
   const [activeSection, setActiveSection] = useState<Section>('vocab');
@@ -27,7 +27,7 @@ export default function NorskApp() {
       </header>
 
       <nav style={{ marginBottom: '2rem', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-        {(['vocab', 'grammar', 'phrases', 'exercises', 'dialogues', 'reading'] as Section[]).map(section => (
+        {(['vocab', 'grammar', 'phrases', 'conjugations', 'dialogues', 'readings'] as Section[]).map(section => (
           <button
             key={section}
             onClick={() => {
@@ -140,10 +140,10 @@ export default function NorskApp() {
           </>
         )}
 
-        {activeSection === 'exercises' && (
+        {activeSection === 'conjugations' && (
           <>
-            <h2>Exercises</h2>
-            <p>Interactive exercises coming soon...</p>
+            <h2>Verb Conjugations</h2>
+            <p>Verb conjugation patterns and examples...</p>
           </>
         )}
 
@@ -154,7 +154,7 @@ export default function NorskApp() {
           </>
         )}
 
-        {activeSection === 'reading' && (
+        {activeSection === 'readings' && (
           <>
             <h2>Reading Comprehension</h2>
             <p>Reading texts with translations coming soon...</p>
