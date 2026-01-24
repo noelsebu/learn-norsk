@@ -257,10 +257,10 @@ const RD = [
 {t:"Ny i Norge",l:"A2",tx:"Jeg heter Priya og flyttet til Norge for seks måneder siden. I begynnelsen var det vanskelig fordi jeg ikke snakket norsk. Nå går jeg på norskkurs tre ganger i uken. Grammatikken er fortsatt vanskelig! Vinteren var kald — minus tjue grader i januar. Men nordlysene var utrolig vakre. Jeg har fått mange norske venner. Min favoritt norske mat er brunost!",en:"My name is Priya and I moved to Norway six months ago. In the beginning it was hard because I didn't speak Norwegian. Now I attend Norwegian class three times a week. Grammar is still difficult! Winter was cold — minus twenty in January. But the northern lights were incredibly beautiful. I've made many Norwegian friends. My favorite Norwegian food is brown cheese!",qs:[{q:"Når flyttet Priya?",o:["For et år siden","For seks måneder siden","I fjor"],a:"For seks måneder siden"},{q:"Hva er vanskelig?",o:["Maten","Grammatikken","Vennene"],a:"Grammatikken"},{q:"Hva liker hun å spise?",o:["Fisk","Brunost","Kjøttkaker"],a:"Brunost"}]},
 ];
 
-const sh = (a) => [...a].sort(() => Math.random() - 0.5);
-const pk = (a) => a[Math.floor(Math.random() * a.length)];
+const sh = (a: any[]) => [...a].sort(() => Math.random() - 0.5);
+const pk = (a: any[]) => a[Math.floor(Math.random() * a.length)];
 const allW = Object.values(V).flat();
-const lc = (l) => l === "A1" ? "#34D399" : "#FBBF24";
+const lc = (l: string) => l === "A1" ? "#34D399" : "#FBBF24";
 
 /* ══════ MAIN COMPONENT ══════ */
 export default function App() {
