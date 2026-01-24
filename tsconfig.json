@@ -5,8 +5,7 @@
     "jsx": "react-jsx",
     "module": "ESNext",
     "moduleResolution": "bundler",
-    "strict": false,
-    "noImplicitAny": false,
+    "strict": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
